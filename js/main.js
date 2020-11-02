@@ -32,7 +32,7 @@ const select = (id_div_box) => {
     <img src="./img/pdficon.png" id="btnPrintSave" class="noPrint" onclick="window.print()" /> 
     <img src="./img/backbutton.png" id="btnBack" class="noPrint" onclick="location.reload()" />
     `);
-    
+
 
     id_div_box.insertBefore(btn, id_div_box.childNodes[length - 1]);
     // id_div_box.insertBefore(btnBack, id_div_box.childNodes[length - 1]);
@@ -57,11 +57,11 @@ const select = (id_div_box) => {
 
 //Функция удаления бокса.
 const DeleteBox = (btn) => {
-    
-    if (btn.className == "btnBox") {
-        let box = btn.parentNode.parentNode.parentNode.parentNode; //Переменная целого бокса.
-        let RowsBox = btn.parentNode.parentNode.parentNode.getElementsByTagName("tr"); //Переменная массива строк бокса.
-    }
+    // console.log(btn);
+    let box = btn.parentNode.parentNode.parentNode.parentNode; //Переменная целого бокса.
+    let RowsBox = btn.parentNode.parentNode.parentNode.getElementsByTagName("tr"); //Переменная массива строк бокса.
+    // if (btn.className == "btnBox") {
+    // }
 
     if (btn.value == "Back") {
         btn.value = "Delete";
@@ -74,6 +74,7 @@ const DeleteBox = (btn) => {
         box.style.opacity = "0.5";
         box.className = "noPrint";
     }
+
 
     let allTables = temp_id_div_box.getElementsByTagName("table"); //Переменная массива всех боксов.
     let tables = temp_id_div_box.querySelectorAll(".printed"); //Переменная массива всех видимых боксов.
@@ -90,7 +91,7 @@ const DeleteBox = (btn) => {
 
         if (RowsBox[i].cells.length == 5) {
             RowsBox[i].cells[4].style.visibility = "";
-            RowsBox[i].cells[4].firstElementChild.value = "Delete"
+            RowsBox[i].cells[4].firstElementChild.value = "Delete";
         }
     }
 
@@ -116,10 +117,10 @@ const DeleteBox = (btn) => {
 
 //Функция удаления строки в боксе.
 const DeleteRow = (btn) => {
-    if (btn.className == "btnRow") {
-        let row = btn.parentNode.parentNode; //tr
-        let RowsInBox = row.parentNode.getElementsByTagName("tr"); // Массив строк бокса.
-    }
+    let row = btn.parentNode.parentNode; //tr
+    let RowsInBox = row.parentNode.getElementsByTagName("tr"); // Массив строк бокса.
+    // if (btn.className == "btnRow") {
+    // }
 
     if (btn.value == "Back") {
         btn.value = "Delete";
@@ -178,5 +179,5 @@ const CalcScale = () => {
     let result = (parseFloat(def.value) * (1500 - num.value)) / 1500;
 
     newScale.innerText = result.toFixed(3);
-    
+
 }
