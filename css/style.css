@@ -6,25 +6,6 @@ body {
 
 }
 
-@supports (height: 100vh) { 
-    body{   
-        background: linear-gradient(to right top, #0f8094 50%, #DDD 50%);
-        background-size: 100% calc(100% - 100vh + 30px);
-        background-repeat: no-repeat;
-    }
-
-    body:before{
-        content:'';
-        position: fixed;
-        top: 10px;
-        bottom: 0;
-        width: 100%;
-        z-index: -1;
-        background: white;
-    }
-}
-
-
 #main {
     padding: 20px;
 }
