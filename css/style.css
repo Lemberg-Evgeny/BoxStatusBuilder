@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family:Verdana, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-weight: bold; */
+}
+
+#main {
+    padding: 20px;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+nav {
+    cursor: pointer;
+}
+
+.dropdown-menu a {
+    margin-left: 30px
+}
+
+table[frome="boxs"] {
+    margin-bottom: 20px;
+    width: 80%;
+    /* border: 1px solid black; */
+    padding: 5px;
+    font-size: 22px;
+    table-layout: auto;
+    margin-left: 10%;
+}
+
+table[frome="boxs"] td:nth-child(1) {
+    width: 150px;
+    /* width: 10%; */
+}
+
+/* Description */
+table[frome="boxs"] td:nth-child(2) {
+    text-align: left;
+    width: 90%;
+    /* width: 30%; */
+}
+
+/* P/N */
+table[frome="boxs"] td:nth-child(3) {
+    width: 130px;
+    /* width: 20%; */
+}
+
+/* Quantety */
+table[frome="boxs"] td:nth-child(4) {
+    width: 130px;
+    /* width: 30%; */
+}
+
+/* button */
+table[frome="boxs"] td:nth-child(5) {
+    position: absolute;
+    border: none;
+    /* width: auto; */
+    /* width: 10%; */
+}
+
+
+tr[headRow="bold"] {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(3, 93, 110);
+    /* border: 2px solid black; */
+}
+
+table[frome="boxs"] td {
+    border: 2px solid black;
+    text-align: center;
+    /* margin: 20px; */
+    padding: 5px;
+    max-width: 250px;
+    min-width: 100px;
+    text-transform: uppercase;
+    /* overflow:hidden; */
+}
+
+button,
+input[type=button] {
+    font-size: 20px; 
+    color: white;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+    background-color: rgb(26, 95, 214); 
+}
+
+.btnBox, .btnRow{
+    background-image: url('../img/delete-forever.png') ;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white !important;
+    color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+h3.noPrint {
+    color: red;
+}
+
+input.txtCell,
+select {
+    width: 95%;
+    font-size: 16.5px;
+    text-align-last: center;
+    border: none;
+    background-color: rgb(223, 245, 99);
+    max-lines: 1;
+    padding-left: 10px;
+}
+
+#btnPrintSave, #btnBack {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    width: 5em;
+    cursor: pointer;
+}
+
+#btnBack {
+    top: 60%;
+}
+#btnPrintSave:hover, #btnBack:hover{
+    width: 5.4em;
+    /* transform: rotate(10deg); */
+}
+
+
+/* STATUS */
+#Status, #Status_Pro_32 {
+    color: rgb(3, 93, 110);
+    /* margin: 20px; */
+    font-size: 18px;
+
+}
+
+table[frome="status"] {
+    border: 2px solid black;
+    margin-bottom: 10px;
+    width: 100%;
+    align-content: center;
+
+}
+
+table[frome="status"] tr td {
+    border: 2px solid black;
+
+}
+
+.CustomerInput {
+    border: 2px solid rgb(248, 93, 3);
+    font-style: italic;
+    font-size: 21px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    width: 380px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.CustomerLable {
+    font-size: 21px;
+    /* font-style: italic; */
+    font-weight: bold;
+
+}
+
+.trHead {
+    color: rgb(248, 93, 3);
+    font-weight: bolder;
+}
+
+table[frome="status"] input,
+#Status select {
+    width: 100%;
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    max-lines: 1;
+
+}
+
+#Status input[type="checkbox"],
+#Status_Pro_32 input[type="checkbox"] {
+    transform: scale(2);
+    -ms-transform: scale(2);
+    /* IE */
+    -moz-transform: scale(2);
+    /* FF */
+    -webkit-transform: scale(2);
+    /* Safari and Chrome */
+    -o-transform: scale(2);
+    /* Opera */
+    /* margin: 10px; */
+}
+
+
+.left table[frome="status"] td:nth-child(1) {
+    width: 200px;
+}
+
+.left table[frome="status"] td:nth-child(2) {
+    width: 250px;
+}
+
+.right table[frome="status"] td:nth-child(1) {
+    width: 50px;
+    text-transform: uppercase;
+}
+
+.right table[frome="status"] td:nth-child(2) {
+    width: 50px;
+}
+
+/* Created by */
+
+#by {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+  
+    text-align: center;
+
+}
+
+#by a {
+    text-decoration: none;
+    color: gray;
+    text-shadow: 1px 1px 2px black;
+}
+
+#by a:hover {
+    color: whitesmoke;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media print {
+    table {
+        page-break-inside: avoid;
+    }
+
+    .noPrint {
+        display: none;
+    }
+
+    #btnPrintSave {
+        visibility: hidden;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .CustomerInput {
+        border: none;
+    }
+}
