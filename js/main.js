@@ -181,3 +181,14 @@ const CalcScale = () => {
     newScale.innerText = result.toFixed(3);
 
 }
+
+//Отображения сегодняшнего года в футере
+const curentYear = new Date().getFullYear();
+
+document.getElementById('footer').innerHTML = `
+<p id="by"> 
+    <a class="" href="https://www.facebook.com/lemberg.evgeny" target="_blank">
+        Created by &copy;Lemberg Evgeny 2019-${curentYear} 
+    </a>
+</p>
+`;
