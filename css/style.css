@@ -113,6 +113,12 @@ h3.noPrint {
     color: red;
 }
 
+hr.air{
+    background-color: red;
+    height: 2px;
+    box-shadow: 1px 1px 1px black;
+}
+
 input.txtCell,
 select {
     /* width: 95%; */

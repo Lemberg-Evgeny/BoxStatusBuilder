@@ -153,13 +153,14 @@ const DeleteRow = (btn) => {
         RowsInBox[i].firstElementChild.innerHTML = i - temp;
     }
 }
-const counterAirShaft = (quantetySells) => {
+const counterQuantetyCells = (quantetySells) => {
+    console.log(quantetySells);
     let counter = 1;
     for (let i = 0; i < quantetySells.length; i++) {
         quantetySells[i].innerHTML = `${counter++}/${quantetySells.length}`;
-        // console.log(quantetySells[i].innerHTML);
     }
 }
+
 //Функция добавления бокса аир шафт
 const AddAirShaft = (btn) => {
     let box = btn.parentNode.parentNode.parentNode.parentNode;
@@ -167,50 +168,125 @@ const AddAirShaft = (btn) => {
     let quantetySells;
     let boxs;
 
-    // let counter = 1;
-
-    const insertAfter = (referenceNode, newNode) => {
-        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-        // btn.remove();
-        boxs = temp_id_div_box.querySelectorAll('.printed');
-        quantetySells = temp_id_div_box.querySelectorAll('.airShaft');
-
-        // console.log(quantetySells);
-
-    }
 
     let el = document.createElement('table');
     let attrFrome = document.createAttribute('frome');
     attrFrome.value = 'boxs';
     el.setAttributeNode(attrFrome);
     el.className = 'printed';
-    el.innerHTML = `
-                <tr headRow="bold">
-                    <td> </td>
-                    <td> Description </td>
-                    <td> P/N </td>
-                    <td> Quantety </td>
-                    <td class="noPrint">
-                        <input type="button" class="btnAddAirShaft" value="+" onclick="AddAirShaft(this)" />
-                        <input type="button" class="btnRemoveAirShaft" value=" - " onclick="RemoveAirShaft(this)" />
-                    </td>
-                </tr>
-                <tr>
-                    <td> 1 </td>
-                    <td> Air Shaft 1.6m </td>
-                    <td> 11101693 </td>
-                    <td class="airShaft"> </td>
-                </tr>    
-      `;
+    if (btn.className == 'btnAddAirShaft1-6') {
+        el.innerHTML = `
+            <tr headRow="bold">
+                <td> </td>
+                <td> Description </td>
+                <td> P/N </td>
+                <td> Quantety </td>
+                <td class="noPrint">
+                    <input type="button" class="btnAddAirShaft1-6" value="+" onclick="AddAirShaft(this)" />
+                    <input type="button" class="btnRemoveAirShaft1-6" value=" - " onclick="RemoveAirShaft(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Air Shaft 1.6m </td>
+                <td> 11101693 </td>
+                <td class="airShaft1-6"> </td>
+            </tr>    
+  `;
+
+    } else if (btn.className == 'btnAddAirShaft3-2') {
+        // quantetySells = temp_id_div_box.querySelectorAll('.airShaft3-2');
+        el.innerHTML = `
+            <tr headRow="bold">
+                <td> </td>
+                <td> Description </td>
+                <td> P/N </td>
+                <td> Quantety </td>
+                <td class="noPrint">
+                    <input type="button" class="btnAddAirShaft3-2" value="+" onclick="AddAirShaft(this)" />
+                    <input type="button" class="btnRemoveAirShaft3-2" value=" - " onclick="RemoveAirShaft(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Air Shaft 3.2m </td>
+                <td> 11101540 </td>
+                <td class="airShaft3-2"> </td>
+            </tr>    
+  `;
+
+    } else if (btn.className == 'btnAddAirShaft5-2') {
+        // quantetySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
+        el.innerHTML = `
+            <tr headRow="bold">
+                <td> </td>
+                <td> Description </td>
+                <td> P/N </td>
+                <td> Quantety </td>
+                <td class="noPrint">
+                    <input type="button" class="btnAddAirShaft5-2" value="+" onclick="AddAirShaft(this)" />
+                    <input type="button" class="btnRemoveAirShaft5-2" value=" - " onclick="RemoveAirShaft(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Air Shaft 5.2m </td>
+                <td> 11101772 </td>
+                <td class="airShaft5-2"> </td>
+            </tr>    
+  `;
+
+    } else if (btn.className == 'btnAddAssyMotor') {
+        // quantetySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
+        el.innerHTML = `
+            <tr headRow="bold">
+                <td> </td>
+                <td> Description </td>
+                <td> P/N </td>
+                <td> Quantety </td>
+                <td class="noPrint">
+                    <input type="button" class="btnAddAssyMotor" value="+" onclick="AddAirShaft(this)" />
+                    <input type="button" class="btnRemoveAssyMotor" value=" - " onclick="RemoveAirShaft(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> ASSY SUPPORT MOTOR AIR SHAFT </td>
+                <td> 11101537 </td>
+                <td class="airShaftAssyMotor"> </td>
+            </tr>    
+  `;
+    }
+
+
+    const insertAfter = (referenceNode, newNode) => {
+        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+        boxs = temp_id_div_box.querySelectorAll('.printed');
+
+        switch (btn.className) {
+            case 'btnAddAirShaft1-6':
+                quantetySells = temp_id_div_box.querySelectorAll('.airShaft1-6');
+                break;
+            case 'btnAddAirShaft3-2':
+                quantetySells = temp_id_div_box.querySelectorAll('.airShaft3-2');
+                break;
+            case 'btnAddAirShaft5-2':
+                quantetySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
+                break;
+            case 'btnAddAssyMotor':
+                quantetySells = temp_id_div_box.querySelectorAll('.airShaftAssyMotor');
+                break;
+        }
+    }
+
 
     insertAfter(box, el);
+    counterQuantetyCells(quantetySells);
 
     //Функция подсчёта видемых боксов
     for (let i = 0; i < boxs.length; i++) {
         boxs[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + boxs.length;
     }
-
-    counterAirShaft(quantetySells);
 
 }
 
@@ -218,14 +294,27 @@ const AddAirShaft = (btn) => {
 const RemoveAirShaft = (btn) => {
     let box = btn.parentNode.parentNode.parentNode.parentNode;
     let quantetySells;
-    
+
     box.remove();
-    quantetySells = temp_id_div_box.querySelectorAll('.airShaft');
 
-    counterAirShaft(quantetySells);
-   
+    switch (btn.className) {
+        case 'btnRemoveAirShaft1-6':
+            quantetySells = temp_id_div_box.querySelectorAll('.airShaft1-6');
+            break;
+        case 'btnRemoveAirShaft3-2':
+            quantetySells = temp_id_div_box.querySelectorAll('.airShaft3-2');
+            break;
+        case 'btnRemoveAirShaft5-2':
+            quantetySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
+            break;
+        case 'btnRemoveAssyMotor':
+            quantetySells = temp_id_div_box.querySelectorAll('.airShaftAssyMotor');
+            break;
+    }
+
+    counterQuantetyCells(quantetySells);
+
 }
-
 
 //Функция диапозона ввода в инпуты
 const handleChange = (input) => {
