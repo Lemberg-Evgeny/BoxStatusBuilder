@@ -115,13 +115,15 @@ h3.noPrint {
 
 input.txtCell,
 select {
-    width: 95%;
+    /* width: 95%; */
     font-size: 16.5px;
     text-align-last: center;
     border: none;
-    background-color: rgb(223, 245, 99);
+    background-color: rgb(118, 199, 219);
+    /* background-color: rgb(223, 245, 99); */
     max-lines: 1;
-    padding-left: 10px;
+    /* padding-left: 10px; */
+    cursor: pointer;
 }
 
 #btnPrintSave, #btnBack {

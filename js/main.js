@@ -85,7 +85,9 @@ const DeleteBox = (btn) => {
 
     // Цикл востановления бокса.
     for (let i = 0; i < RowsBox.length; i++) {
-        if (i == 0) { continue; }
+        if (i == 0) {
+            continue;
+        }
 
         RowsBox[i].cells[0].innerHTML = i;
 
@@ -101,7 +103,9 @@ const DeleteBox = (btn) => {
             allTables[i].rows[0].cells[0].innerHTML = "BOX #/#";
 
             for (let j = 0; j < allTables[i].rows.length; j++) {
-                if (j == 0) { continue; }
+                if (j == 0) {
+                    continue;
+                }
 
                 allTables[i].rows[j].cells[0].innerHTML = "#";
 
@@ -137,7 +141,9 @@ const DeleteRow = (btn) => {
     // Цикл определения строк.
     let temp = 0;
     for (let i = 0; i < RowsInBox.length; i++) {
-        if (i == 0) { continue; }
+        if (i == 0) {
+            continue;
+        }
 
         if (RowsInBox[i].className == "noPrint") {
             RowsInBox[i].firstElementChild.innerHTML = "#";
@@ -146,6 +152,78 @@ const DeleteRow = (btn) => {
         }
         RowsInBox[i].firstElementChild.innerHTML = i - temp;
     }
+}
+const counterAirShaft = (quantetySells) => {
+    let counter = 1;
+    for (let i = 0; i < quantetySells.length; i++) {
+        quantetySells[i].innerHTML = `${counter++}/${quantetySells.length}`;
+        // console.log(quantetySells[i].innerHTML);
+    }
+}
+//Функция добавления бокса аир шафт
+const AddAirShaft = (btn) => {
+    let box = btn.parentNode.parentNode.parentNode.parentNode;
+    // let quantety = box.childNodes[1].childNodes[2].childNodes[7].innerHTML; //Ячейка количество аир шафтов
+    let quantetySells;
+    let boxs;
+
+    // let counter = 1;
+
+    const insertAfter = (referenceNode, newNode) => {
+        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+        // btn.remove();
+        boxs = temp_id_div_box.querySelectorAll('.printed');
+        quantetySells = temp_id_div_box.querySelectorAll('.airShaft');
+
+        // console.log(quantetySells);
+
+    }
+
+    let el = document.createElement('table');
+    let attrFrome = document.createAttribute('frome');
+    attrFrome.value = 'boxs';
+    el.setAttributeNode(attrFrome);
+    el.className = 'printed';
+    el.innerHTML = `
+                <tr headRow="bold">
+                    <td> </td>
+                    <td> Description </td>
+                    <td> P/N </td>
+                    <td> Quantety </td>
+                    <td class="noPrint">
+                        <input type="button" class="btnAddAirShaft" value="+" onclick="AddAirShaft(this)" />
+                        <input type="button" class="btnRemoveAirShaft" value=" - " onclick="RemoveAirShaft(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> Air Shaft 1.6m </td>
+                    <td> 11101693 </td>
+                    <td class="airShaft"> </td>
+                </tr>    
+      `;
+
+    insertAfter(box, el);
+
+    //Функция подсчёта видемых боксов
+    for (let i = 0; i < boxs.length; i++) {
+        boxs[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + boxs.length;
+    }
+
+    counterAirShaft(quantetySells);
+
+}
+
+//Функция удаление аир шафта
+const RemoveAirShaft = (btn) => {
+    let box = btn.parentNode.parentNode.parentNode.parentNode;
+    let quantetySells;
+    
+    box.remove();
+    quantetySells = temp_id_div_box.querySelectorAll('.airShaft');
+
+    counterAirShaft(quantetySells);
+   
 }
 
 
