@@ -153,6 +153,7 @@ const DeleteRow = (btn) => {
         RowsInBox[i].firstElementChild.innerHTML = i - temp;
     }
 }
+
 const counterQuantetyCells = (quantetySells) => {
     console.log(quantetySells);
     let counter = 1;
@@ -195,7 +196,6 @@ const AddAirShaft = (btn) => {
   `;
 
     } else if (btn.className == 'btnAddAirShaft3-2') {
-        // quantetySells = temp_id_div_box.querySelectorAll('.airShaft3-2');
         el.innerHTML = `
             <tr headRow="bold">
                 <td> </td>
@@ -216,7 +216,6 @@ const AddAirShaft = (btn) => {
   `;
 
     } else if (btn.className == 'btnAddAirShaft5-2') {
-        // quantetySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
         el.innerHTML = `
             <tr headRow="bold">
                 <td> </td>
@@ -237,7 +236,6 @@ const AddAirShaft = (btn) => {
   `;
 
     } else if (btn.className == 'btnAddAssyMotor') {
-        // quantetySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
         el.innerHTML = `
             <tr headRow="bold">
                 <td> </td>
