@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     user-select: none;
-    font-family:Verdana, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    font-family: Verdana, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 #main {
@@ -90,16 +90,17 @@ table[frome="boxs"] td {
 
 button,
 input[type=button] {
-    font-size: 20px; 
+    font-size: 20px;
     color: white;
     border: solid 1px rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 3px 3px 5px black;
-    background-color: rgb(26, 95, 214); 
+    background-color: rgb(26, 95, 214);
 }
 
-.btnBox, .btnRow{
-    background-image: url('../img/delete-forever.png') ;
+.btnBox,
+.btnRow {
+    background-image: url('../img/delete-forever.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -113,7 +114,7 @@ h3.noPrint {
     color: red;
 }
 
-hr.air{
+hr.air {
     background-color: red;
     height: 2px;
     box-shadow: 1px 1px 1px black;
@@ -132,7 +133,8 @@ select {
     cursor: pointer;
 }
 
-#btnPrintSave, #btnBack {
+#btnPrintSave,
+#btnBack {
     position: fixed;
     top: 50%;
     left: 10%;
@@ -143,14 +145,17 @@ select {
 #btnBack {
     top: 60%;
 }
-#btnPrintSave:hover, #btnBack:hover{
+
+#btnPrintSave:hover,
+#btnBack:hover {
     width: 5.4em;
     /* transform: rotate(10deg); */
 }
 
 
 /* STATUS */
-#Status, #Status_Pro_32 {
+#Status,
+#Status_Pro_32 {
     color: rgb(3, 93, 110);
     /* margin: 20px; */
     font-size: 18px;
@@ -241,7 +246,7 @@ table[frome="status"] input,
 #by {
     font-family: 'Courier New', Courier, monospace;
     font-size: 11px;
-  
+
     text-align: center;
 
 }
