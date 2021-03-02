@@ -90,13 +90,13 @@
         <!--Content-->
         <div id="content" class="container">
             <div class="row mb-5">
-                <div class="col-sm card text-white bg-dark m-1">
+                <div class="col-sm card text-white bg-dark m-1 shadow shadow-lg">
                     <div class="card-header">Scale for Servo</div>
                     <div class="card-body">
-                        <input id="DefScale" type="text" value="26205.191">
-                        <input type="number" id="num" placeholder="mm">
-                        <button onclick="CalcScale();">OK</button>
-                        <h3 class="card-title" id="newScale">26205.191</h3>
+                        <input class="my-2" id="DefScale" type="text" value="26205.191">
+                        <input class="my-2" type="number" id="num" placeholder="mm">
+                        <button class="btn btn-info btn-sm" onclick="CalcScale();">OK</button>
+                        <h3 class="card-title mt-2" id="newScale">26205.191</h3>
                         <hr />
                         <p>if less than 150 mm is indicated, indicate the deviation is minus(-).</p>
                         <p>if more than 150 mm is indicated, indicate which deviation is plus(+).</p>

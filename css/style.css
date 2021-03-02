@@ -108,8 +108,8 @@ table[frome="boxs"] td {
 button,
 input[type=button] {
     font-size: 20px;
-    /* color: white; */
-    /* border: solid 1px rgb(255, 255, 255); */
+    color: white;
+    border: solid 1px rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 3px 3px 5px black;
     background-color: rgb(26, 95, 214);
