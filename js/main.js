@@ -350,20 +350,21 @@ const CalcScale = () => {
 
 //функция добавления колонки check list
 const addColCheckList = (box) => {
+    if (box.id !== "Status" && box.id !== "Status_Pro_32") {
 
-    let RowsBox = box.getElementsByTagName("tr"); //Переменная массива строк бокса.
-    let tbl = box.getElementsByTagName("table");// Переменная всех таблиц в боксе.
+        let RowsBox = box.getElementsByTagName("tr"); //Переменная массива строк бокса.
+        let tbl = box.getElementsByTagName("table");// Переменная всех таблиц в боксе.
 
-    for (let i = 0; i < tbl.length; i++) {//Проходимся по всем таблицам
-        for (let j = 0; j < tbl[i].childNodes[1].children.length; j++) {//В каждой таблице в теге <tbody> проходим по всем строкам
-            if (j == 0) {//если строка в таблице первая то:
-                tbl[i].childNodes[1].children[0].insertCell(4).innerHTML = `Check List`;//добавляем заголовок
-            } else {
-                tbl[i].childNodes[1].children[j].insertCell(4).innerHTML = `<input type="checkbox" name="" id="">`;//иначе добавляем чекбокс
+        for (let i = 0; i < tbl.length; i++) {//Проходимся по всем таблицам
+            for (let j = 0; j < tbl[i].childNodes[1].children.length; j++) {//В каждой таблице в теге <tbody> проходим по всем строкам
+                if (j == 0) {//если строка в таблице первая то:
+                    tbl[i].childNodes[1].children[0].insertCell(4).innerHTML = `Check List`;//добавляем заголовок
+                } else {
+                    tbl[i].childNodes[1].children[j].insertCell(4).innerHTML = `<input type="checkbox" name="" id="">`;//иначе добавляем чекбокс
+                }
             }
         }
     }
-
 
 }
 
