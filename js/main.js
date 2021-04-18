@@ -183,6 +183,7 @@ const AddAirShaft = (btn) => {
                 <td> Description </td>
                 <td> P/N </td>
                 <td> Quantety </td>
+                <td> Check List </td>
                 <td class="noPrint">
                     <input type="button" class="btnAddAirShaft1-6" value="+" onclick="AddAirShaft(this)" />
                     <input type="button" class="btnRemoveAirShaft1-6" value=" - " onclick="RemoveAirShaft(this)" />
@@ -193,6 +194,7 @@ const AddAirShaft = (btn) => {
                 <td> Air Shaft 1.6m </td>
                 <td> 11101693 </td>
                 <td class="airShaft1-6"> </td>
+                <td> <input type="checkbox"> </td>
             </tr>    
   `;
 
@@ -203,6 +205,7 @@ const AddAirShaft = (btn) => {
                 <td> Description </td>
                 <td> P/N </td>
                 <td> Quantety </td>
+                <td> Check List </td>
                 <td class="noPrint">
                     <input type="button" class="btnAddAirShaft3-2" value="+" onclick="AddAirShaft(this)" />
                     <input type="button" class="btnRemoveAirShaft3-2" value=" - " onclick="RemoveAirShaft(this)" />
@@ -213,6 +216,7 @@ const AddAirShaft = (btn) => {
                 <td> Air Shaft 3.2m </td>
                 <td> 11101540 </td>
                 <td class="airShaft3-2"> </td>
+                <td> <input type="checkbox"> </td>
             </tr>    
   `;
 
@@ -223,6 +227,7 @@ const AddAirShaft = (btn) => {
                 <td> Description </td>
                 <td> P/N </td>
                 <td> Quantety </td>
+                <td> Check List </td>
                 <td class="noPrint">
                     <input type="button" class="btnAddAirShaft5-2" value="+" onclick="AddAirShaft(this)" />
                     <input type="button" class="btnRemoveAirShaft5-2" value=" - " onclick="RemoveAirShaft(this)" />
@@ -233,6 +238,7 @@ const AddAirShaft = (btn) => {
                 <td> Air Shaft 5.2m </td>
                 <td> 11101772 </td>
                 <td class="airShaft5-2"> </td>
+                <td> <input type="checkbox"> </td>
             </tr>    
   `;
 
@@ -243,6 +249,7 @@ const AddAirShaft = (btn) => {
                 <td> Description </td>
                 <td> P/N </td>
                 <td> Quantety </td>
+                <td> Check List </td>
                 <td class="noPrint">
                     <input type="button" class="btnAddAssyMotor" value="+" onclick="AddAirShaft(this)" />
                     <input type="button" class="btnRemoveAssyMotor" value=" - " onclick="RemoveAirShaft(this)" />
@@ -253,6 +260,7 @@ const AddAirShaft = (btn) => {
                 <td> ASSY SUPPORT MOTOR AIR SHAFT </td>
                 <td> 11101537 </td>
                 <td class="airShaftAssyMotor"> </td>
+                <td> <input type="checkbox"> </td>
             </tr>    
   `;
     }
@@ -360,7 +368,7 @@ const addColCheckList = (box) => {
                 if (j == 0) {//если строка в таблице первая то:
                     tbl[i].childNodes[1].children[0].insertCell(4).innerHTML = `Check List`;//добавляем заголовок
                 } else {
-                    tbl[i].childNodes[1].children[j].insertCell(4).innerHTML = `<input type="checkbox" name="" id="">`;//иначе добавляем чекбокс
+                    tbl[i].childNodes[1].children[j].insertCell(4).innerHTML = `<input type="checkbox">`;//иначе добавляем чекбокс
                 }
             }
         }
