@@ -65,8 +65,14 @@ table[frome="boxs"] td:nth-child(4) {
     width: 100px;
 }
 
-/* button */
+/* CheckList */
 table[frome="boxs"] td:nth-child(5) {
+    font-size: 15px;
+    width: 100px;
+}
+
+/* button */
+table[frome="boxs"] td:nth-child(6) {
     position: absolute;
     border: none;
     /* width: auto; */

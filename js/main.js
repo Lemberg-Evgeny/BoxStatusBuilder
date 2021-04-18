@@ -3,6 +3,8 @@ let temp_id_div_box = null; //Глобальная временная перем
 //Функция нажатия кнопок меню.
 const select = (id_div_box) => {
 
+    addColCheckList(id_div_box);
+
     let div_menu = document.getElementById("content");
     let nav = document.getElementById("nav");
     let footer = document.getElementById("footer")
@@ -168,7 +170,6 @@ const AddAirShaft = (btn) => {
     // let quantety = box.childNodes[1].childNodes[2].childNodes[7].innerHTML; //Ячейка количество аир шафтов
     let quantetySells;
     let boxs;
-
 
     let el = document.createElement('table');
     let attrFrome = document.createAttribute('frome');
@@ -344,6 +345,25 @@ const CalcScale = () => {
     let result = (parseFloat(def.value) * (1500 - num.value)) / 1500;
 
     newScale.innerText = result.toFixed(3);
+
+}
+
+//функция добавления колонки check list
+const addColCheckList = (box) => {
+
+    let RowsBox = box.getElementsByTagName("tr"); //Переменная массива строк бокса.
+    let tbl = box.getElementsByTagName("table");// Переменная всех таблиц в боксе.
+
+    for (let i = 0; i < tbl.length; i++) {//Проходимся по всем таблицам
+        for (let j = 0; j < tbl[i].childNodes[1].children.length; j++) {//В каждой таблице в теге <tbody> проходим по всем строкам
+            if (j == 0) {//если строка в таблице первая то:
+                tbl[i].childNodes[1].children[0].insertCell(4).innerHTML = `Check List`;//добавляем заголовок
+            } else {
+                tbl[i].childNodes[1].children[j].insertCell(4).innerHTML = `<input type="checkbox" name="" id="">`;//иначе добавляем чекбокс
+            }
+        }
+    }
+
 
 }
 
