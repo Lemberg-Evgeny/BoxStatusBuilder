@@ -2,7 +2,7 @@ let temp_id_div_box = null; //Глобальная временная перем
 
 //Функция нажатия кнопок меню.
 const select = (id_div_box) => {
-
+    
     addColCheckList(id_div_box);
 
     let div_menu = document.getElementById("content");
@@ -13,7 +13,7 @@ const select = (id_div_box) => {
     }
 
     temp_id_div_box = id_div_box;
-
+    
     div_menu.remove();
     nav.remove();
     footer.remove();
@@ -375,6 +375,12 @@ const addColCheckList = (box) => {
     }
 
 }
+
+//Функция кастомного бокса
+const addTable = () => {
+    console.log(temp_id_div_box)
+}
+
 
 //Отображения сегодняшнего года в футере
 const curentYear = new Date().getFullYear();
