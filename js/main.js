@@ -380,17 +380,17 @@ const addColCheckList = (box) => {
 //Функция кастомного бокса
 const addTable = (menu_item) => {
 
- 
 
-    let arrTables = menu_item.getElementsByTagName('table');
-    let lastTable = arrTables[arrTables.length - 1];
+    if (menu_item.id !== "Status" && menu_item.id !== "Status_Pro_32") {
+        let arrTables = menu_item.getElementsByTagName('table');
+        let lastTable = arrTables[arrTables.length - 1];
 
-    let table = document.createElement('table');
-    let attrFrome = document.createAttribute('frome');
-    attrFrome.value = 'boxs';
-    table.setAttributeNode(attrFrome);
-    table.className = 'printed';
-    table.innerHTML = `
+        let table = document.createElement('table');
+        let attrFrome = document.createAttribute('frome');
+        attrFrome.value = 'boxs';
+        table.setAttributeNode(attrFrome);
+        table.className = 'printed';
+        table.innerHTML = `
               
                        <tr headRow="bold">
                            <td></td>
@@ -409,9 +409,9 @@ const addTable = (menu_item) => {
                   
               `;
 
-   
-    lastTable.parentNode.insertBefore(table, lastTable.nextSibling);
 
+        lastTable.parentNode.insertBefore(table, lastTable.nextSibling);
+    }
 }
 
 
