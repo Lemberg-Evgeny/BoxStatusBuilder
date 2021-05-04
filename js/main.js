@@ -378,11 +378,11 @@ const addColCheckList = (box) => {
 }
 
 //Функция кастомного бокса
-const addTable = (menu_item) => {
+const addTable = (box) => {
 
 
-    if (menu_item.id !== "Status" && menu_item.id !== "Status_Pro_32") {
-        let arrTables = menu_item.getElementsByTagName('table');
+    if (box.id !== "Status" && box.id !== "Status_Pro_32") {
+        let arrTables = box.getElementsByTagName('table');
         let lastTable = arrTables[arrTables.length - 1];
 
         let table = document.createElement('table');
@@ -402,8 +402,8 @@ const addTable = (menu_item) => {
                        <tr>
                            <td></td>
                            <td> <input type="text" class="inputCastomBox" /> </td>
-                           <td> </td>
-                           <td> </td>
+                           <td> <input type="text" class="inputCastomBox" /> </td>
+                           <td> <input type="text" class="inputCastomBox" /> </td>
                            <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" /></td>
                        </tr>
                   

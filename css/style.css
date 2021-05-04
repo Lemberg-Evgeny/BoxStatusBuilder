@@ -31,6 +31,11 @@ nav {
     
 }
 
+.inputCastomBox{
+    border: none;
+    text-transform: uppercase;
+}
+
 table[frome="boxs"] {
     margin-bottom: 80px;
     width: 80%;
@@ -144,11 +149,6 @@ hr.air {
     background-color: red;
     height: 2px;
     box-shadow: 1px 1px 1px black;
-}
-
-.inputCastomBox{
-    border: none;
-    text-transform: uppercase;
 }
 
 #btnPrintSave,
