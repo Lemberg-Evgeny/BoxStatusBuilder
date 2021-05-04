@@ -166,11 +166,11 @@ const DeleteRow = (btn) => {
     }
 }
 
-const counterQuantetyCells = (quantetySells) => {
+const counterQuantityCells = (QuantitySells) => {
 
     let counter = 1;
-    for (let i = 0; i < quantetySells.length; i++) {
-        quantetySells[i].innerHTML = `${counter++}/${quantetySells.length}`;
+    for (let i = 0; i < QuantitySells.length; i++) {
+        QuantitySells[i].innerHTML = `${counter++}/${QuantitySells.length}`;
     }
 
 
@@ -179,8 +179,8 @@ const counterQuantetyCells = (quantetySells) => {
 //Функция добавления бокса аир шафт
 const AddAirShaft = (btn) => {
     let box = btn.parentNode.parentNode.parentNode.parentNode;
-    // let quantety = box.childNodes[1].childNodes[2].childNodes[7].innerHTML; //Ячейка количество аир шафтов
-    let quantetySells;
+    // let Quantity = box.childNodes[1].childNodes[2].childNodes[7].innerHTML; //Ячейка количество аир шафтов
+    let QuantitySells;
     let boxs;
 
     let el = document.createElement('table');
@@ -194,7 +194,7 @@ const AddAirShaft = (btn) => {
                 <td> </td>
                 <td> Description </td>
                 <td> P/N </td>
-                <td> Quantety </td>
+                <td> Quantity </td>
                 <td> Check List </td>
                 <td class="noPrint">
                     <input type="button" class="btnAddAirShaft1-6" value="+" onclick="AddAirShaft(this)" />
@@ -216,7 +216,7 @@ const AddAirShaft = (btn) => {
                 <td> </td>
                 <td> Description </td>
                 <td> P/N </td>
-                <td> Quantety </td>
+                <td> Quantity </td>
                 <td> Check List </td>
                 <td class="noPrint">
                     <input type="button" class="btnAddAirShaft3-2" value="+" onclick="AddAirShaft(this)" />
@@ -238,7 +238,7 @@ const AddAirShaft = (btn) => {
                 <td> </td>
                 <td> Description </td>
                 <td> P/N </td>
-                <td> Quantety </td>
+                <td> Quantity </td>
                 <td> Check List </td>
                 <td class="noPrint">
                     <input type="button" class="btnAddAirShaft5-2" value="+" onclick="AddAirShaft(this)" />
@@ -260,7 +260,7 @@ const AddAirShaft = (btn) => {
                 <td> </td>
                 <td> Description </td>
                 <td> P/N </td>
-                <td> Quantety </td>
+                <td> Quantity </td>
                 <td> Check List </td>
                 <td class="noPrint">
                     <input type="button" class="btnAddAssyMotor" value="+" onclick="AddAirShaft(this)" />
@@ -284,23 +284,23 @@ const AddAirShaft = (btn) => {
 
         switch (btn.className) {
             case 'btnAddAirShaft1-6':
-                quantetySells = temp_id_div_box.querySelectorAll('.airShaft1-6');
+                QuantitySells = temp_id_div_box.querySelectorAll('.airShaft1-6');
                 break;
             case 'btnAddAirShaft3-2':
-                quantetySells = temp_id_div_box.querySelectorAll('.airShaft3-2');
+                QuantitySells = temp_id_div_box.querySelectorAll('.airShaft3-2');
                 break;
             case 'btnAddAirShaft5-2':
-                quantetySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
+                QuantitySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
                 break;
             case 'btnAddAssyMotor':
-                quantetySells = temp_id_div_box.querySelectorAll('.airShaftAssyMotor');
+                QuantitySells = temp_id_div_box.querySelectorAll('.airShaftAssyMotor');
                 break;
         }
     }
 
 
     insertAfter(box, el);
-    counterQuantetyCells(quantetySells);
+    counterQuantityCells(QuantitySells);
 
     //Функция подсчёта видемых боксов
     // for (let i = 0; i < boxs.length; i++) {
@@ -313,26 +313,26 @@ const AddAirShaft = (btn) => {
 //Функция удаление аир шафта
 const RemoveAirShaft = (btn) => {
     let box = btn.parentNode.parentNode.parentNode.parentNode;
-    let quantetySells;
+    let QuantitySells;
 
     box.remove();
 
     switch (btn.className) {
         case 'btnRemoveAirShaft1-6':
-            quantetySells = temp_id_div_box.querySelectorAll('.airShaft1-6');
+            QuantitySells = temp_id_div_box.querySelectorAll('.airShaft1-6');
             break;
         case 'btnRemoveAirShaft3-2':
-            quantetySells = temp_id_div_box.querySelectorAll('.airShaft3-2');
+            QuantitySells = temp_id_div_box.querySelectorAll('.airShaft3-2');
             break;
         case 'btnRemoveAirShaft5-2':
-            quantetySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
+            QuantitySells = temp_id_div_box.querySelectorAll('.airShaft5-2');
             break;
         case 'btnRemoveAssyMotor':
-            quantetySells = temp_id_div_box.querySelectorAll('.airShaftAssyMotor');
+            QuantitySells = temp_id_div_box.querySelectorAll('.airShaftAssyMotor');
             break;
     }
 
-    counterQuantetyCells(quantetySells);
+    counterQuantityCells(QuantitySells);
 
 }
 
@@ -374,14 +374,14 @@ const addColCheckList = (box) => {
     if (box.id !== "Status" && box.id !== "Status_Pro_32") {
 
         // let RowsBox = box.getElementsByTagName("tr"); //Переменная массива строк бокса.
-        let tbl = box.getElementsByTagName("table");// Переменная всех таблиц в боксе.
+        let tbl = box.getElementsByTagName("table"); // Переменная всех таблиц в боксе.
 
-        for (let i = 0; i < tbl.length; i++) {//Проходимся по всем таблицам
-            for (let j = 0; j < tbl[i].childNodes[1].children.length; j++) {//В каждой таблице в теге <tbody> проходим по всем строкам
-                if (j == 0) {//если строка в таблице первая то:
-                    tbl[i].childNodes[1].children[0].insertCell(4).innerHTML = `Check List`;//добавляем заголовок
+        for (let i = 0; i < tbl.length; i++) { //Проходимся по всем таблицам
+            for (let j = 0; j < tbl[i].childNodes[1].children.length; j++) { //В каждой таблице в теге <tbody> проходим по всем строкам
+                if (j == 0) { //если строка в таблице первая то:
+                    tbl[i].childNodes[1].children[0].insertCell(4).innerHTML = `Check List`; //добавляем заголовок
                 } else {
-                    tbl[i].childNodes[1].children[j].insertCell(4).innerHTML = `<input type="checkbox">`;//иначе добавляем чекбокс
+                    tbl[i].childNodes[1].children[j].insertCell(4).innerHTML = `<input type="checkbox">`; //иначе добавляем чекбокс
                 }
             }
         }
@@ -400,25 +400,31 @@ const addTable = () => {
         let attrFrome = document.createAttribute('frome');
         attrFrome.value = 'boxs';
         table.setAttributeNode(attrFrome);
-        table.className = 'printed bg-danger';
+        table.className = 'printed';
         table.innerHTML = `
                        <tr headRow="bold">
                            <td></td>
                            <td> Description </td>
                            <td> P/N </td>
-                           <td> Quantety </td>
+                           <td> Quantity </td>
                            <td> Check List </td>
                            <td class="noPrint"><input type="button" class="btnBox" value="Delete" onclick="DeleteBox(this)" /></td>
                        </tr>
                        <tr>
                            <td> 1 </td>
-                           <td> <input type="text" class="inputCastomBox" /> </td>
-                           <td> <input type="text" class="inputCastomBox" /> </td>
-                           <td> <input type="text" class="inputCastomBox" /> </td>
+                         
+                    <td> <input type="text" class="inputCastomBox" /> </td>
+                    <td> 11101907</td>
+                    <td> 2 </td>
+                        
                            <td> <input type="checkbox"> </td>
                        </tr>
               `;
 
+
+                        //    <td> <input type="text" class="inputCastomBox" /> </td>
+                        //    <td> <input type="text" class="inputCastomBox" /> </td>
+                        //    <td> <input type="text" class="inputCastomBox" /> </td>
         lastTable.parentNode.insertBefore(table, lastTable.nextSibling);
 
         recalculation();
