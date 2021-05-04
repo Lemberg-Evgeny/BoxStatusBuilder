@@ -389,7 +389,7 @@ const addTable = (box) => {
         let attrFrome = document.createAttribute('frome');
         attrFrome.value = 'boxs';
         table.setAttributeNode(attrFrome);
-        table.className = 'printed';
+        table.className = 'printed bg-danger';
         table.innerHTML = `
               
                        <tr headRow="bold">
