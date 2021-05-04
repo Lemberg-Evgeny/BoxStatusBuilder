@@ -42,7 +42,7 @@ const select = (id_div_box) => {
     /////////////////////////////////////////////////////////////////////
 
     if (id_div_box.id !== "Status" && id_div_box.id !== "Status_Pro_32") {
-
+        
         let table = id_div_box.querySelectorAll("table");
 
         for (let i = 0; i <= table.length - 1; i++) {
@@ -55,6 +55,8 @@ const select = (id_div_box) => {
             }
         }
     }
+
+   
 
 }
 
