@@ -410,7 +410,7 @@ const addTable = (box) => {
               `;
 
 
-        lastTable.parentNode.insertBefore(table, lastTable.nextSibling);
+        lastTable.parentNode.insertBefore(table, lastTable);
     }
 }
 
