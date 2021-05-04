@@ -158,7 +158,7 @@ hr.air {
 }
 
 #btnPrintSave,
-#btnBack {
+#btnBack, #addBox {
     position: fixed;
     top: 50%;
     left: 10%;
@@ -168,6 +168,10 @@ hr.air {
 
 #btnBack {
     top: 60%;
+}
+
+#addBox{
+    top: 75%;
 }
 
 #btnPrintSave:hover,

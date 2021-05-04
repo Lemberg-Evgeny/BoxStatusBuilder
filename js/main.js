@@ -3,7 +3,7 @@ let temp_id_div_box = null; //Глобальная временная перем
 //Функция нажатия кнопок меню.
 const select = (id_div_box) => {
 
-    addTable(id_div_box);
+    // addTable(id_div_box);
     addColCheckList(id_div_box);
 
     let div_menu = document.getElementById("content");
@@ -34,6 +34,8 @@ const select = (id_div_box) => {
     let btn = create(`
     <img src="./img/pdficon.png" id="btnPrintSave" class="noPrint" onclick="window.print()" /> 
     <img src="./img/backbutton.png" id="btnBack" class="noPrint" onclick="location.reload()" />
+    <button id="addBox" class="noPrint btn btn-info shadow" onclick="addTable()">Add BOX</button>
+    
     `);
 
 
@@ -42,7 +44,7 @@ const select = (id_div_box) => {
     /////////////////////////////////////////////////////////////////////
 
     if (id_div_box.id !== "Status" && id_div_box.id !== "Status_Pro_32") {
-        
+
         let table = id_div_box.querySelectorAll("table");
 
         for (let i = 0; i <= table.length - 1; i++) {
@@ -56,7 +58,7 @@ const select = (id_div_box) => {
         }
     }
 
-   
+
 
 }
 
@@ -84,9 +86,11 @@ const DeleteBox = (btn) => {
     let allTables = temp_id_div_box.getElementsByTagName("table"); //Переменная массива всех боксов.
     let tables = temp_id_div_box.querySelectorAll(".printed"); //Переменная массива всех видимых боксов.
 
-    for (let i = 0; i < tables.length; i++) {
-        tables[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + tables.length;
-    }
+    // for (let i = 0; i < tables.length; i++) {
+    //     tables[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + tables.length;
+    // }
+
+    recalculation();
 
     // Цикл востановления бокса.
     for (let i = 0; i < RowsBox.length; i++) {
@@ -160,11 +164,13 @@ const DeleteRow = (btn) => {
 }
 
 const counterQuantetyCells = (quantetySells) => {
-    console.log(quantetySells);
+
     let counter = 1;
     for (let i = 0; i < quantetySells.length; i++) {
         quantetySells[i].innerHTML = `${counter++}/${quantetySells.length}`;
     }
+
+
 }
 
 //Функция добавления бокса аир шафт
@@ -294,9 +300,10 @@ const AddAirShaft = (btn) => {
     counterQuantetyCells(quantetySells);
 
     //Функция подсчёта видемых боксов
-    for (let i = 0; i < boxs.length; i++) {
-        boxs[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + boxs.length;
-    }
+    // for (let i = 0; i < boxs.length; i++) {
+    //     boxs[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + boxs.length;
+    // }
+    recalculation();
 
 }
 
@@ -380,9 +387,8 @@ const addColCheckList = (box) => {
 }
 
 //Функция кастомного бокса
-const addTable = (box) => {
-
-
+const addTable = () => {
+    box = temp_id_div_box;
     if (box.id !== "Status" && box.id !== "Status_Pro_32") {
         let arrTables = box.getElementsByTagName('table');
         let lastTable = arrTables[arrTables.length - 1];
@@ -393,27 +399,37 @@ const addTable = (box) => {
         table.setAttributeNode(attrFrome);
         table.className = 'printed bg-danger';
         table.innerHTML = `
-              
                        <tr headRow="bold">
                            <td></td>
                            <td> Description </td>
                            <td> P/N </td>
                            <td> Quantety </td>
+                           <td> Check List </td>
                            <td class="noPrint"><input type="button" class="btnBox" value="Delete" onclick="DeleteBox(this)" /></td>
                        </tr>
                        <tr>
-                           <td></td>
+                           <td> 1 </td>
                            <td> <input type="text" class="inputCastomBox" /> </td>
                            <td> <input type="text" class="inputCastomBox" /> </td>
                            <td> <input type="text" class="inputCastomBox" /> </td>
-                           <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" /></td>
+                           <td> <input type="checkbox"> </td>
                        </tr>
-                  
               `;
 
+        lastTable.parentNode.insertBefore(table, lastTable.nextSibling);
+        
+        recalculation();
 
-        lastTable.parentNode.insertBefore(table, lastTable);
     }
+}
+
+//Функция подсчёта видемых боксов
+const recalculation = () => {
+    let tables = temp_id_div_box.querySelectorAll(".printed");
+    for (let i = 0; i < tables.length; i++) {
+        tables[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + tables.length;
+    }
+   
 }
 
 
