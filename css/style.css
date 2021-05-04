@@ -146,6 +146,11 @@ hr.air {
     box-shadow: 1px 1px 1px black;
 }
 
+.inputCastomBox{
+    border: none;
+    text-transform: uppercase;
+}
+
 #btnPrintSave,
 #btnBack {
     position: fixed;

@@ -380,13 +380,18 @@ const addColCheckList = (box) => {
 //Функция кастомного бокса
 const addTable = (menu_item) => {
 
+ 
+
     let arrTables = menu_item.getElementsByTagName('table');
     let lastTable = arrTables[arrTables.length - 1];
 
-    console.log(lastTable);
-
-    lastTable.innerHTML = `
-              <table frome="boxs" class="printed">
+    let table = document.createElement('table');
+    let attrFrome = document.createAttribute('frome');
+    attrFrome.value = 'boxs';
+    table.setAttributeNode(attrFrome);
+    table.className = 'printed';
+    table.innerHTML = `
+              
                        <tr headRow="bold">
                            <td></td>
                            <td> Description </td>
@@ -396,13 +401,17 @@ const addTable = (menu_item) => {
                        </tr>
                        <tr>
                            <td></td>
-                           <td> </td>
+                           <td> <input type="text" class="inputCastomBox" /> </td>
                            <td> </td>
                            <td> </td>
                            <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" /></td>
                        </tr>
-                   </table>
-              `
+                  
+              `;
+
+   
+    lastTable.parentNode.insertBefore(table, lastTable.nextSibling);
+
 }
 
 
