@@ -2,7 +2,8 @@ let temp_id_div_box = null; //Глобальная временная перем
 
 //Функция нажатия кнопок меню.
 const select = (id_div_box) => {
-    
+
+    addTable(id_div_box);
     addColCheckList(id_div_box);
 
     let div_menu = document.getElementById("content");
@@ -13,7 +14,7 @@ const select = (id_div_box) => {
     }
 
     temp_id_div_box = id_div_box;
-    
+
     div_menu.remove();
     nav.remove();
     footer.remove();
@@ -360,7 +361,7 @@ const CalcScale = () => {
 const addColCheckList = (box) => {
     if (box.id !== "Status" && box.id !== "Status_Pro_32") {
 
-        let RowsBox = box.getElementsByTagName("tr"); //Переменная массива строк бокса.
+        // let RowsBox = box.getElementsByTagName("tr"); //Переменная массива строк бокса.
         let tbl = box.getElementsByTagName("table");// Переменная всех таблиц в боксе.
 
         for (let i = 0; i < tbl.length; i++) {//Проходимся по всем таблицам
@@ -377,8 +378,31 @@ const addColCheckList = (box) => {
 }
 
 //Функция кастомного бокса
-const addTable = () => {
-    console.log(temp_id_div_box)
+const addTable = (menu_item) => {
+
+    let arrTables = menu_item.getElementsByTagName('table');
+    let lastTable = arrTables[arrTables.length - 1];
+
+    console.log(lastTable);
+
+    lastTable.innerHTML = `
+              <table frome="boxs" class="printed">
+                       <tr headRow="bold">
+                           <td></td>
+                           <td> Description </td>
+                           <td> P/N </td>
+                           <td> Quantety </td>
+                           <td class="noPrint"><input type="button" class="btnBox" value="Delete" onclick="DeleteBox(this)" /></td>
+                       </tr>
+                       <tr>
+                           <td></td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                           <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" /></td>
+                       </tr>
+                   </table>
+              `
 }
 
 
