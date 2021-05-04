@@ -158,7 +158,7 @@ hr.air {
 }
 
 #btnPrintSave,
-#btnBack, #addBox {
+#btnBack, #btnAddBox {
     position: fixed;
     top: 50%;
     left: 10%;
@@ -170,7 +170,7 @@ hr.air {
     top: 60%;
 }
 
-#addBox{
+#btnAddBox{
     top: 75%;
 }
 

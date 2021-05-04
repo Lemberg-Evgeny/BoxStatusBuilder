@@ -34,7 +34,7 @@ const select = (id_div_box) => {
     let btn = create(`
     <img src="./img/pdficon.png" id="btnPrintSave" class="noPrint" onclick="window.print()" /> 
     <img src="./img/backbutton.png" id="btnBack" class="noPrint" onclick="location.reload()" />
-    <button id="addBox" class="noPrint btn btn-info shadow" onclick="addTable()">Add BOX</button>
+    <button id="btnAddBox" class="noPrint btn btn-info shadow" onclick="addTable()">Add BOX</button>
     
     `);
 
@@ -56,6 +56,9 @@ const select = (id_div_box) => {
                 }
             }
         }
+
+    } else {
+        document.getElementById('btnAddBox').remove();
     }
 
 
@@ -417,7 +420,7 @@ const addTable = () => {
               `;
 
         lastTable.parentNode.insertBefore(table, lastTable.nextSibling);
-        
+
         recalculation();
 
     }
@@ -429,7 +432,7 @@ const recalculation = () => {
     for (let i = 0; i < tables.length; i++) {
         tables[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + tables.length;
     }
-   
+
 }
 
 
