@@ -39,22 +39,15 @@ nav {
 }
 
 .inputCastomBox {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-transform: uppercase;
-    /* height: auto; */
-    /* width: auto; */
-    /* white-space: pre; */
-    /* white-space: normal; */
-    /* overflow: visible; */
-    /* text-overflow: ellipsis; */
-    /* word-break: break-all; */
-    /* word-wrap: break-word; */
-    /* overflow-wrap: break-word; */
-
-    /* overflow: hidden; */
+  
+    display: block;
+    width: 100%;
+    overflow: hidden;
     resize: none;
-    overflow: visible;
-
+    /* min-height: 40px;
+    line-height: 20px; */
 }
 
 table[frome="boxs"] {
@@ -76,8 +69,8 @@ table[frome="boxs"] td:nth-child(1) {
 table[frome="boxs"] td:nth-child(2) {
     text-align: left;
     /* width: 90%; */
-    width: auto;
-    /* width:100%; */
+    /* width: auto; */
+    
 }
 
 /* P/N */

@@ -412,24 +412,40 @@ const addTable = () => {
                        </tr>
                        <tr>
                            <td> 1 </td>
-                         
-                    <td> <input type="text" class="inputCastomBox" /> </td>
-                    <td> 11101907</td>
-                    <td> 2 </td>
-                        
+                           <td> <span class="inputCastomBox" role="textbox" contenteditable></span> </td>
+                           <td> <span class="inputCastomBox" role="textbox" contenteditable></span> </td>
+                           <td> <span class="inputCastomBox" role="textbox" contenteditable></span> </td>
                            <td> <input type="checkbox"> </td>
+                           <td class="noPrint">
+                                <input type="button" class="btnAddLine" value="+" onclick="AddLine(this)" />
+                                <input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
+                           </td>
                        </tr>
-              `;
+                         `;
 
-
-                        //    <td> <input type="text" class="inputCastomBox" /> </td>
-                        //    <td> <input type="text" class="inputCastomBox" /> </td>
-                        //    <td> <input type="text" class="inputCastomBox" /> </td>
         lastTable.parentNode.insertBefore(table, lastTable.nextSibling);
 
         recalculation();
 
     }
+}
+
+const AddLine = (btn) => {
+    const line = btn.parentNode.parentNode;
+    let tr = document.createElement('tr');
+    tr.innerHTML = `
+                           <td> </td>
+                           <td> <span class="inputCastomBox" role="textbox" contenteditable></span> </td>
+                           <td> <span class="inputCastomBox" role="textbox" contenteditable></span> </td>
+                           <td> <span class="inputCastomBox" role="textbox" contenteditable></span> </td>
+                           <td> <input type="checkbox"> </td>
+                           <td class="noPrint">
+                                <input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
+                           </td>
+    `;
+    console.log(btn.parentNode.parentNode);
+    line.parentNode.insertBefore(tr, line.nextSibling);
+
 }
 
 //Функция подсчёта видемых боксов
