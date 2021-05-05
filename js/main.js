@@ -151,6 +151,24 @@ const DeleteRow = (btn) => {
     }
 
     // Цикл определения строк.
+    // let temp = 0;
+    // for (let i = 0; i < RowsInBox.length; i++) {
+    //     if (i == 0) {
+    //         continue;
+    //     }
+
+    //     if (RowsInBox[i].className == "noPrint") {
+    //         RowsInBox[i].firstElementChild.innerHTML = "#";
+    //         temp++;
+    //         continue;
+    //     }
+    //     RowsInBox[i].firstElementChild.innerHTML = i - temp;
+    // }
+    recalcRows(RowsInBox);
+}
+
+const recalcRows = (RowsInBox) =>{
+
     let temp = 0;
     for (let i = 0; i < RowsInBox.length; i++) {
         if (i == 0) {
@@ -432,6 +450,7 @@ const addTable = () => {
 
 const AddLine = (btn) => {
     const line = btn.parentNode.parentNode;
+    
     let tr = document.createElement('tr');
     tr.innerHTML = `
                            <td> </td>
@@ -443,9 +462,11 @@ const AddLine = (btn) => {
                                 <input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
                            </td>
     `;
-    console.log(btn.parentNode.parentNode);
+    // console.log(btn.parentNode.parentNode);
     line.parentNode.insertBefore(tr, line.nextSibling);
-
+    let RowsInBox = line.parentNode.getElementsByTagName("tr"); // Массив строк бокса.
+    recalcRows(RowsInBox);
+    
 }
 
 //Функция подсчёта видемых боксов
