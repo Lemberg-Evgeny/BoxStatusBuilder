@@ -39,15 +39,13 @@ nav {
 }
 
 .inputCastomBox {
-    /* border: 1px solid black; */
+    border: 1px dashed black;
     text-transform: uppercase;
-  
     display: block;
     width: 100%;
     overflow: hidden;
     resize: none;
-    /* min-height: 40px;
-    line-height: 20px; */
+
 }
 
 table[frome="boxs"] {
@@ -323,7 +321,7 @@ table[frome="status"] input,
         appearance: none;
     }
 
-    .CustomerInput {
+    .CustomerInput, .inputCastomBox {
         border: none;
     }
 }
