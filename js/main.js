@@ -32,9 +32,9 @@ const select = (id_div_box) => {
 
     // let btn = create('<button id="btnPrintSave" class="noPrint" onclick="window.print()">Print/Save to PDF</button> <button id="btnBack" class="noPrint" onclick="location.reload()">Back</button>');
     let btn = create(`
-    <img src="./img/pdficon.png" id="btnPrintSave" class="noPrint" onclick="window.print()" /> 
-    <img src="./img/backbutton.png" id="btnBack" class="noPrint" onclick="location.reload()" />
-    <button id="btnAddBox" class="noPrint btn btn-info shadow" onclick="addTable()">Add BOX</button>
+    <img src="./img/pdficon.png" id="btnPrintSave" type="button" class="noPrint" onclick="window.print()" /> 
+    <img src="./img/backbutton.png" id="btnBack" type="button" class="noPrint" onclick="location.reload()" />
+    <button id="btnAddBox" type="button" class="noPrint btn btn-info shadow" onclick="addTable()">Add BOX</button>
     
     `);
 
