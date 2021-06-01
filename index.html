@@ -150,7 +150,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> ASSY ARM FOR MEDIA SHAFT SUPPORT BASE </td>
+                    <td> SHAFT SUPPORT </td>
                     <td> 11102040 </td>
                     <td> 4 </td>
                 </tr>
@@ -159,7 +159,6 @@
                     <td> BALL LOCK PINS D=12 L=70 </td>
                     <td> 77700657 </td>
                     <td> 4 </td>
-                    <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" /></td>
                 </tr>
             </table>
             <table frome="boxs" class="printed">
@@ -255,7 +254,14 @@
                     <td></td>
                     <td> Media disk </td>
                     <td> 11100551 </td>
-                    <td><input type="text" class="txtCell" maxlength="2" onchange="handleChange(this)" value="2" /></td>
+                    <td>
+                    <select>
+                        <option value="">2</option>
+                        <option value="">4</option>
+                        <option value="">6</option>
+                    </select>
+                        <!-- <input type="text" class="txtCell" maxlength="2" onchange="handleChange(this)" value="2" /> -->
+                    </td>
                 </tr>
             </table>
             <table frome="boxs" class="printed">
@@ -267,7 +273,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> Media Bracket Stand + (M8X20 + SPRING + WASHER + TINT)*4 </td>
+                    <td> Media Bracket Stand + (M8X20 + SPRING + WASHER) </td>
                     <td> 33301901 </td>
                     <td> 6 </td>
                 </tr>
@@ -348,6 +354,9 @@
                     <td> Description </td>
                     <td> P/N </td>
                     <td> Quantity </td>
+                    <td class="noPrint">
+                        <input type="button" class="btnBox" value="Delete" onclick="DeleteBox(this)" />
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -546,6 +555,14 @@
                     <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
                     </td>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td> BACKLIT JIG, CAMERA </td>
+                    <td> 11101435 </td>
+                    <td> 1 </td>
+                    <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
+                    </td>
+                </tr>
             </table>
             <table frome="boxs" class="printed">
                 <tr headRow="bold">
@@ -601,20 +618,6 @@
                     <td> Applicator Tool For IGUS </td>
                     <td> 22200727 </td>
                     <td> 1 </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> O-RING ID=3.86 D=1.78 EPDM PERO </td>
-                    <td> 66600133 </td>
-                    <td> 4 </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> O-RING EPDM PEROXIDE D=133.07MM D=1.78MM </td>
-                    <td> 22202236 </td>
-                    <td> 1 </td>
-                    <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
-                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -710,8 +713,21 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> Slitter </td>
-                    <td> 10102015 </td>
+                    <td>
+                        <span>Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R</span>
+                        <span>ASSY SLITTER WITH STRIP COLLECTING</span>
+                        <!-- <select id="mySelect">
+                            <option value="Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R">Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R</option>
+                            <option value="ASSY SLITTER WITH STRIP COLLECTING">ASSY SLITTER WITH STRIP COLLECTING</option>
+                        </select> -->
+                    </td>
+                    <td> 
+                        <select id="sn_Slitter">
+                            <option value="10102015">10102015</option>
+                            <option value="10102115">10102115</option>
+                        </select>
+                         
+                    </td>
                     <td><input type="text" class="txtCell" maxlength="2" onchange="handleChange(this)" /></td>
                 </tr>
             </table>
