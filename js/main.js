@@ -478,6 +478,7 @@ const recalculation = () => {
 
 }
 
+//Функция отоброжения названия слитера в зависимости от выбранного PN
 const getSlitter = (sn) => {
     // console.log(sn)
     if (sn) {
