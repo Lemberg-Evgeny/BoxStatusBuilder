@@ -714,15 +714,11 @@
                 <tr>
                     <td></td>
                     <td>
-                        <span>Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R</span>
-                        <span>ASSY SLITTER WITH STRIP COLLECTING</span>
-                        <!-- <select id="mySelect">
-                            <option value="Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R">Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R</option>
-                            <option value="ASSY SLITTER WITH STRIP COLLECTING">ASSY SLITTER WITH STRIP COLLECTING</option>
-                        </select> -->
+                        <span id="slitterName">Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R</span>
+                        <!-- <span>ASSY SLITTER WITH STRIP COLLECTING</span> -->
                     </td>
-                    <td> 
-                        <select id="sn_Slitter">
+                    <td class="bg-danger"> 
+                        <select id="sn_Slitter" onchange="getSlitter(value)">
                             <option value="10102015">10102015</option>
                             <option value="10102115">10102115</option>
                         </select>

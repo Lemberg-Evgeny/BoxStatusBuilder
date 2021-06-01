@@ -167,7 +167,7 @@ const DeleteRow = (btn) => {
     recalcRows(RowsInBox);
 }
 
-const recalcRows = (RowsInBox) =>{
+const recalcRows = (RowsInBox) => {
 
     let temp = 0;
     for (let i = 0; i < RowsInBox.length; i++) {
@@ -450,7 +450,7 @@ const addTable = () => {
 
 const AddLine = (btn) => {
     const line = btn.parentNode.parentNode;
-    
+
     let tr = document.createElement('tr');
     tr.innerHTML = `
                            <td> </td>
@@ -466,7 +466,7 @@ const AddLine = (btn) => {
     line.parentNode.insertBefore(tr, line.nextSibling);
     let RowsInBox = line.parentNode.getElementsByTagName("tr"); // Массив строк бокса.
     recalcRows(RowsInBox);
-    
+
 }
 
 //Функция подсчёта видемых боксов
@@ -476,6 +476,20 @@ const recalculation = () => {
         tables[i].rows[0].cells[0].innerHTML = "BOX " + (i + 1) + "/" + tables.length;
     }
 
+}
+
+const getSlitter = (sn) => {
+    // console.log(sn)
+    if (sn) {
+        switch (sn) {
+            case "10102015":
+                document.getElementById('slitterName').innerHTML = 'Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R';
+                break;
+            case "10102115":
+                document.getElementById('slitterName').innerHTML = 'ASSY SLITTER WITH STRIP COLLECTING';
+                break;
+        }
+    }
 }
 
 
