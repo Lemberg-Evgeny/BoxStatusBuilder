@@ -735,11 +735,11 @@
                 <tr>
                     <td></td>
                     <td>
-                        <span id="slitterName">Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R</span>
-                        <!-- <span>ASSY SLITTER WITH STRIP COLLECTING</span> -->
+                        <span class="slitterName">Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R</span>
+                        <!-- <span class="slitterName">ASSY SLITTER WITH STRIP COLLECTING</span> -->
                     </td>
                     <td> 
-                        <select id="sn_Slitter" onchange="getSlitter(value)">
+                        <select onchange="getSlitter(value)">
                             <option value="10102015">10102015</option>
                             <option value="10102115">10102115</option>
                         </select>   
@@ -5488,6 +5488,14 @@
                     <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
                     </td>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td> BACKLIT JIG, CAMERA </td>
+                    <td> 11101435 </td>
+                    <td> 1 </td>
+                    <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
+                    </td>
+                </tr>
             </table>
 
             <table frome="boxs" class="printed">
@@ -5543,38 +5551,6 @@
                     <td></td>
                     <td> Applicator Tool For IGUS </td>
                     <td> 22200727 </td>
-                    <td> 1 </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> O-RING ID=3.86 D=1.78 EPDM PERO </td>
-                    <td> 66600133 </td>
-                    <td> 4 </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> O-RING EPDM PEROXIDE D=133.07MM D=1.78MM </td>
-                    <td> 22202236 </td>
-                    <td> 1 </td>
-                    <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> O-RING FOR SIT 2DEEP </td>
-                    <td> 22202311 </td>
-                    <td> 1 </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> O-RING 2-048 EPDM 70A PEROXIDE CURED </td>
-                    <td> 66600473 </td>
-                    <td> 1 </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> O-RING ID=94.97 D=1.78 EPDM PERO </td>
-                    <td> 66600288 </td>
                     <td> 1 </td>
                 </tr>
                 <tr>
@@ -5674,8 +5650,16 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> Slitter </td>
-                    <td> 10102015 </td>
+                    <td>
+                        <!-- <span class="slitterName">Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R</span> -->
+                        <span class="slitterName">ASSY SLITTER WITH STRIP COLLECTING</span>
+                    </td>
+                    <td> 
+                        <select onchange="getSlitter(value)">
+                            <option value="10102115">10102115</option>
+                            <option value="10102015">10102015</option>
+                        </select>   
+                    </td>
                     <td><input type="text" class="txtCell" maxlength="2" onchange="handleChange(this)" /></td>
                 </tr>
             </table>
@@ -5708,8 +5692,8 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> On site spare parts kit for VUTEK 3R/5R </td>
-                    <td> 10102003 </td>
+                    <td> KIT ON SITE SPARE PARTS VUTEK Q3R/Q5R </td>
+                    <td> 10102106 </td>
                     <td> 1 </td>
                 </tr>
             </table>
@@ -5811,7 +5795,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> Static Support Right </td>
+                    <td> Static Support Right FRONT </td>
                     <td> 11102041 </td>
                     <td>
                         <select>
@@ -5822,9 +5806,11 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> Static Support Right <br><mark
-                            class="text-muted h6 font-weight-light font-italic text-lowercase">[ for Air Shaft 5.2m
-                            11101772 ]</mark> </td>
+                    <td> 
+                        Static Support Right for air shaft REAR 
+                        <!-- <br> -->
+                        <!-- <mark class="text-muted h6 font-weight-light font-italic text-lowercase">[ for Air Shaft 5.2m 11101772 ]</mark>  -->
+                    </td>
                     <td> 11102041 </td>
                     <td> 1 </td>
                     <td class="noPrint"><input type="button" class="btnRow" value="Delete" onclick="DeleteRow(this)" />
@@ -5870,6 +5856,8 @@
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
                         </select>
                     </td>
                 </tr>
@@ -5989,7 +5977,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> SIDE COVERS ASSY </td>
+                    <td> COVERS SIDE ASSY EXTENDED </td>
                     <td> 11101623 </td>
                     <td> 1 </td>
                 </tr>
@@ -6038,6 +6026,23 @@
                     <td></td>
                     <td> KIT PRINTER CALIBRATION SYSTEM FOR VUTEK R2R </td>
                     <td> 11102102 </td>
+                    <td> 1 </td>
+                </tr>
+            </table>
+
+            <table frome="boxs" class="printed">
+                <tr headRow="bold">
+                    <td></td>
+                    <td> Description </td>
+                    <td> P/N </td>
+                    <td> Quantity </td>
+                    <td class="noPrint"><input type="button" class="btnBox" value="Delete" onclick="DeleteBox(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> INSPECTION </td>
+                    <td> 10102118 </td>
                     <td> 1 </td>
                 </tr>
             </table>

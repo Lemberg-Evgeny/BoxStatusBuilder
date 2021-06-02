@@ -482,12 +482,18 @@ const recalculation = () => {
 const getSlitter = (sn) => {
     // console.log(sn)
     if (sn) {
+        const slittersNames = document.querySelectorAll('.slitterName');
+        // console.log(slittersNames)
         switch (sn) {
             case "10102015":
-                document.getElementById('slitterName').innerHTML = 'Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R';
+                slittersNames.forEach((name) => {
+                    name.innerHTML = 'Y-SLITTER 2 BLADED VUTEK 3R+/5R+/D3R/D5R';
+                });
                 break;
             case "10102115":
-                document.getElementById('slitterName').innerHTML = 'ASSY SLITTER WITH STRIP COLLECTING';
+                slittersNames.forEach((name) => {
+                    name.innerHTML = 'ASSY SLITTER WITH STRIP COLLECTING';
+                });
                 break;
         }
     }
