@@ -101,15 +101,16 @@ table[frome="boxs"] td:nth-child(6) {
 table[frome="boxs"] input.txtCell,
 table[frome="boxs"] select {
     width: 120px;
-    /* width: 95%; */
     font-size: 16.5px;
     text-align-last: center;
     border: none;
     background-color: rgb(118, 199, 219);
-    /* background-color: rgb(223, 245, 99); */
-    max-lines: 1;
-    /* padding-left: 10px; */
+    /* max-lines: 1; */
     cursor: pointer;
+}
+
+table[frome="boxs"] select option{ 
+    background-color: rgb(255, 255, 255);
 }
 
 tr[headRow="bold"] {
