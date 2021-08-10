@@ -293,8 +293,28 @@ const AddAirShaft = (btn) => {
                 <td> <input type="checkbox"> </td>
             </tr>    
   `;
+    } else if (btn.className == 'btnAddAirShaftPRO32') {
+        el.innerHTML = `
+            <tr headRow="bold">
+                <td> </td>
+                <td> Description </td>
+                <td> P/N </td>
+                <td> Quantity </td>
+                <td> Check List </td>
+                <td class="noPrint">
+                    <input type="button" class="btnAddAirShaftPRO32" value="+" onclick="AddAirShaft(this)" />
+                    <input type="button" class="btnRemoveAirShaftPRO32" value=" - " onclick="RemoveAirShaft(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> SHAFT LOAD-UNLOAD EXPANDING 1.6M CORE 3" PNEUMATIC </td>
+                <td> 77700795 </td>
+                <td class="airShaftPRO32"> </td>
+                <td> <input type="checkbox"> </td>
+            </tr>    
+  `;
     }
-
 
     const insertAfter = (referenceNode, newNode) => {
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
@@ -312,6 +332,9 @@ const AddAirShaft = (btn) => {
                 break;
             case 'btnAddAssyMotor':
                 QuantitySells = temp_id_div_box.querySelectorAll('.airShaftAssyMotor');
+                break;
+            case 'btnAddAirShaftPRO32':
+                QuantitySells = temp_id_div_box.querySelectorAll('.airShaftPRO32');
                 break;
         }
     }
@@ -347,6 +370,9 @@ const RemoveAirShaft = (btn) => {
             break;
         case 'btnRemoveAssyMotor':
             QuantitySells = temp_id_div_box.querySelectorAll('.airShaftAssyMotor');
+            break;
+        case 'btnRemoveAirShaftPRO32':
+            QuantitySells = temp_id_div_box.querySelectorAll('.AirShaftPRO32');
             break;
     }
 
