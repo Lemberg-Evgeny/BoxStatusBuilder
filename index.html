@@ -8164,6 +8164,23 @@
                 </tr>
             </table>
 
+            <table frome="boxs" class="printed">
+                <tr headRow="bold">
+                    <td></td>
+                    <td> Description </td>
+                    <td> P/N </td>
+                    <td> Quantity </td>
+                    <td class="noPrint"><input type="button" class="btnBox" value="Delete" onclick="DeleteBox(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> ON SITE SPARE PARTS KIT FOR PRO 32R </td>
+                    <td> 10102052 </td>
+                    <td> 1 </td>
+                </tr>
+            </table>
+
             <form id="formNote" class="container">
                 <div class="form-group">
                     <label for="TextareaNote" class="text-uppercase font-weight-bold">Note:</label>
@@ -8437,29 +8454,6 @@
                             <td>H Detector</td>
                             <td><input type="checkbox" /></td>
                         </tr>
-                        <!-- <tr>
-                            <td>Jambo roll</td>
-                            <td>
-                                <select>
-                                    <option></option>
-                                    <option>Front</option>
-                                    <option>Rear</option>
-                                    <option>F&R</option>
-                                </select>
-                            </td>
-                        </tr> -->
-                        <!-- <tr>
-                            <td>Vacuum table</td>
-                            <td>
-                                <select>
-                                    <option></option>
-                                    <option>3x2</option>
-                                    <option>4x8</option>
-                                    <option>5x10</option>
-                                </select>
-                            </td>
-                        </tr> -->
-                        
                         <tr>
                             <td>Sheet collector</td>
                             <td>
@@ -8527,7 +8521,7 @@
                         </tr>
                         <tr>
                             <td>edge media guard</td>
-                            <td><input type="checkbox" /></td>
+                            <td><input type="text" maxlength="2" onchange="handleChange(this)" /></td>
                         </tr>
                     </table>
                 </div>
@@ -8649,6 +8643,10 @@
                         </tr>
                         <tr>
                             <td>Chiller</td>
+                            <td><input type="checkbox" /></td>
+                        </tr>
+                        <tr>
+                            <td>One site repair kit</td>
                             <td><input type="checkbox" /></td>
                         </tr>
                     </table>
