@@ -288,7 +288,7 @@ const AddAirShaft = (btn) => {
             <tr>
                 <td> 1 </td>
                 <td> ASSY SUPPORT MOTOR AIR SHAFT </td>
-                <td> 11101537 </td>
+                <td> 11102259 </td>
                 <td class="airShaftAssyMotor"> </td>
                 <td> <input type="checkbox"> </td>
             </tr>    
@@ -534,5 +534,6 @@ document.getElementById('footer').innerHTML = `
     <a class="" href="https://www.facebook.com/lemberg.evgeny" target="_blank">
         Created by &copy;Lemberg Evgeny 2019-${curentYear} 
     </a>
+    <span>V2</span>
 </p>
 `;
