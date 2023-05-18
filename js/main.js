@@ -534,6 +534,6 @@ document.getElementById('footer').innerHTML = `
     <a class="" href="https://www.facebook.com/lemberg.evgeny" target="_blank">
         Created by &copy;Lemberg Evgeny 2019-${curentYear} 
     </a>
-    <span>V2</span>
+    <span>V3</span>
 </p>
 `;
